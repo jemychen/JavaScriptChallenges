@@ -8,10 +8,19 @@
 // isPangram('The five boxing wizards jump quickly') // true
 // isPangram('The five boxing wizards jump quick') // false
 
+// function isPangram(sentence) {
+//     let lowerCased = sentence.toLowercase();
+//     for (let char of 'abcdefghijklmnopqrstuvwxyz') {
+//         if (lowerCased.indexOf(char) === -1 ) {
+//             return false;
+//         }
+//     } return true;
+// }
+
 function isPangram(sentence) {
     let lowerCased = sentence.toLowercase();
     for (let char of 'abcdefghijklmnopqrstuvwxyz') {
-        if (lowerCased.indexOf(char) === -1 ) {
+        if (!lowerCased.includes(char)) {
             return false;
         }
     } return true;
